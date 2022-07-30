@@ -1,4 +1,4 @@
-# Halaman Samudra
+# Laman Samudra
 
 Selamat datang ke repositori Halaman Samudra!
 
