@@ -21,3 +21,5 @@ Projek ini adalah bersumber terbuka, maka sumbangan anda dialu-alukan!
 Untuk memulakan, anda boleh klonkan projek ini, dan membuat cabang baru. Kemudian, setelah membuat perubahan, anda boleh pintaan gabungan (_pull request_) dan akan digabungkan sekiranya mendapat kelulusan.
 
 Sekiranya terdapat masalah atau cadangan, anda boleh menggunakan tab `Discussion` untuk memulakan perbincangan berkaitan Laman Samudra.
+
+Terima kasih kepada yang sudi menyumbang!
