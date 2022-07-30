@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Halaman Samudra
 
-## Getting Started
+Selamat datang ke repositori Halaman Samudra!
 
-First, run the development server:
+Samudra merupakan satu sistem pengistilahan dan pengongsian yang sedang dibangunkan oleh @Thaza-Kun. Anda boleh terus rujuk ke [repositori Samudra](https://github.com/Thaza-Kun/samudra) untuk mengetahui lebih lanjut berkaitan usaha pembangunan Samudra.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Maklumat berkairan Halaman Samudra
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Projek ini dibangunkan menggunakan tetimbun berikut:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- [Next.js](https://nextjs.org/) - Pembangunan Antaramuka dan Pengalaman Pengguna (UI/UX) untuk memudahkan interaksi bersama sistem Samudra.
+- [Tailwind CSS](https://tailwindcss.com/) - Pustaka penggayaan untuk memudahkan penyeragaman penggayaan.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-## Learn More
+## Sumber Terbuka
 
-To learn more about Next.js, take a look at the following resources:
+Projek ini adalah bersumber terbuka, maka sumbangan anda dialu-alukan!
+Untuk memulakan, anda boleh klonkan projek ini, dan membuat cabang baru. Kemudian, setelah membuat perubahan, anda boleh pintaan gabungan (_pull request_) dan akan digabungkan sekiranya mendapat kelulusan.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Sekiranya terdapat masalah atau cadangan, anda boleh menggunakan tab `Discussion` untuk memulakan perbincangan berkaitan Laman Samudra.
