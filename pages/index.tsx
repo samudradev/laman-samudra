@@ -1,13 +1,18 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import AturanLalai from "layouts/AturanLalai";
 import Lottie from "lottie-react";
 import Input from "components/Borang/Input";
 import { useFormik } from "formik";
 
 import communityAnimation from "lottie/community.json";
-import Lemma, {LemmaProp} from "components/Data/lemma";
+import { LemmaData } from "utils/lemma";
+import Lemma from "components/Data/Lemma";
 
-const Halaman: NextPage = ({data}) => {
+interface HalamanProps {
+  data: LemmaData[];
+}
+
+const Halaman: NextPage<HalamanProps> = ({ data }) => {
   const borangCarian = useFormik({
     initialValues: {
       carian: "",
@@ -36,13 +41,17 @@ const Halaman: NextPage = ({data}) => {
                 onChange={borangCarian.handleChange}
               />
             </form>
-              <Lemma data={data}/>
             <div className="bg-amaran text-amaran-tulisan px-4 py-2 rounded border border-amaran-tulisan">
               <p>
                 Halaman ini masih dalam pembangunan dan di peringkat alfa, maka
                 beberapa fungsi tidak dapat digunakan buat masa ini. Terima
                 kasih kerana memahami.
               </p>
+            </div>
+            <div className="mt-8">
+              {data.map((lemma) => (
+                <Lemma lemma={lemma} key={`lemma-${lemma.id}`} />
+              ))}
             </div>
           </div>
           <div>
@@ -57,12 +66,75 @@ const Halaman: NextPage = ({data}) => {
   );
 };
 
-export async function getServerSideProps() {
-  // Load initial data
-  const res = await fetch(`http:/localhost:8000/lemma/?limit=10`)
-  const data: Array<LemmaProp> = await res.json()
+export const getServerSideProps: GetServerSideProps<
+  HalamanProps
+> = async () => {
+  const mockData: LemmaData[] = [
+    {
+      id: 1,
+      nama: "asdsa",
+      konsep: [
+        {
+          id: 1,
+          keterangan: "keterangan konsep",
+          golongan: "NAMA",
+          tertib: 1,
+          cakupan: [
+            {
+              nama: "",
+            },
+          ],
+          kata_asing: [
+            {
+              bahasa: "en",
+              nama: "name",
+            },
+            {
+              bahasa: "en",
+              nama: "new",
+            },
+          ],
+        },
+      ],
+    },
+  ];
 
-  return {props: {data}}
-}
+  return {
+    props: {
+      data: mockData,
+    },
+  };
+};
+
+// export async function getServerSideProps() {
+//   // Load initial data
+//   const res = await fetch(`http:/localhost:8000/lemma/?limit=10`)
+//   const data: Array<LemmaProp> = await res.json()
+
+//   // Mock data temporarily
+// const mockData = {
+//   "lemma": "nama",
+//   "konsep": {
+//     "keterangan": "keterangan konsep",
+//     "golongan": "NAMA",
+//     "cakupan": [
+//       "pasar",
+//       "percakapan"
+//     ],
+//     "kata_asing": [
+//       {
+//         "bahasa": "en",
+//         "nama": "name"
+//       },
+//       {
+//         "bahasa": "en",
+//         "nama": "new"
+//       }
+//     ]
+//   }
+// };
+
+//   return {props: {data: mockData}}
+// }
 
 export default Halaman;

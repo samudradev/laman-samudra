@@ -1,23 +1,21 @@
-import Konsep, {KonsepProp} from './konsep' 
+import { useId } from "react";
+import { LemmaData } from "utils/lemma";
+import Konsep from "./Konsep";
 
-export interface LemmaProp {
-    id: number;
-    nama: string;
-    konsep: Array<KonsepProp>;
+interface LemmaProps {
+  lemma: LemmaData;
 }
 
+const Lemma: React.FC<LemmaProps> = ({ lemma }) => {
+  const compId = useId();
+  return (
+    <div id={`lemma-${compId}`}>
+      <div>lemma = {lemma.nama}</div>
+      {lemma.konsep.map((kons) => (
+        <Konsep konsep={kons} key={`konsep-${kons.id}`} />
+      ))}
+    </div>
+  );
+};
 
-export default function Lemma(props: {data: Array<LemmaProp>}) {
-    return (
-        <>
-            {props.data.map((lemma) => {
-                return (
-                    <>
-                    <div>lemma = {lemma.nama}</div>
-                    <Konsep data={lemma.konsep}/>
-                    </>
-                )
-            })}
-        </>
-    )
-}
+export default Lemma;

@@ -1,29 +1,28 @@
-import Cakupan, {CakupanProp} from "./cakupan";
-import KataAsing, {KataAsingProp} from "./kata_asing";
-
+import { useId } from "react";
+import { KonsepData } from "utils/lemma";
+import Cakupan from "./Cakupan";
+import KataAsing from "./KataAsing";
 
 export interface KonsepProp {
-    id: number;
-    golongan: string;
-    keterangan: string;
-    tertib: number;
-    cakupan?: Array<CakupanProp>;
-    kata_asing?: Array<KataAsingProp>;
+  konsep: KonsepData;
 }
 
-export default function Konsep(props: {data: Array<KonsepProp>}) {
-    return (
-    <>
-        {props.data.map((konsep) => {
-            return (
-                <>
-                <div>golongan   = {konsep.golongan}</div>
-                <div>konsep     = {konsep.keterangan}</div>
-                {konsep.cakupan && <Cakupan data={konsep.cakupan}/>}
-                {konsep.kata_asing && <KataAsing data={konsep.kata_asing}/>}
-                </>
-            )
-        })}
-    </>
-    )
-}
+const Konsep: React.FC<KonsepProp> = ({ konsep }) => {
+  const compId = useId();
+  return (
+    <div id={`konsep-${compId}`}>
+      <div>golongan = {konsep.golongan}</div>
+      <div>konsep = {konsep.keterangan}</div>
+      {konsep.cakupan &&
+        konsep.cakupan.map((cakup) => (
+          <Cakupan cakupan={cakup} key={`cakupan-${cakup.nama}`} />
+        ))}
+      {konsep.kata_asing &&
+        konsep.kata_asing.map((kata) => (
+          <KataAsing kataAsing={kata} key={`kataAsing-${kata.nama}`} />
+        ))}
+    </div>
+  );
+};
+
+export default Konsep;
