@@ -15,11 +15,14 @@ const Konsep: React.FC<KonsepProp> = ({ konsep }) => {
       <div>konsep = {konsep.keterangan}</div>
       {konsep.cakupan &&
         konsep.cakupan.map((cakup) => (
-          <Cakupan cakupan={cakup} key={`cakupan-${cakup.nama}`} />
+          <Cakupan cakupan={cakup} key={`cakupan-${cakup.cakupan.nama}`} />
         ))}
       {konsep.kata_asing &&
         konsep.kata_asing.map((kata) => (
-          <KataAsing kataAsing={kata} key={`kataAsing-${kata.nama}`} />
+          <KataAsing
+            kataAsing={kata}
+            key={`kataAsing-${kata.kata_asing.nama}`}
+          />
         ))}
     </div>
   );
