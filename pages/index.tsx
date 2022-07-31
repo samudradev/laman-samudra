@@ -7,6 +7,7 @@ import { useFormik } from "formik";
 import communityAnimation from "lottie/community.json";
 import { LemmaData } from "utils/lemma";
 import Lemma from "components/Data/Lemma";
+import SenaraiLemma from "data/mocks/lemma";
 
 interface HalamanProps {
   data: LemmaData[];
@@ -70,43 +71,12 @@ const Halaman: NextPage<HalamanProps> = ({ data }) => {
 export const getServerSideProps: GetServerSideProps<
   HalamanProps
 > = async () => {
-  //   const res = await fetch(`http:/localhost:8000/lemma/?limit=10`)
-  //   const data: Array<LemmaProp> = await res.json()
-
-  // Data palsu sementara
-  const mockData: LemmaData[] = [
-    {
-      id: 1,
-      nama: "asdsa",
-      konsep: [
-        {
-          id: 1,
-          keterangan: "keterangan konsep",
-          golongan: "NAMA",
-          tertib: 1,
-          cakupan: [
-            {
-              nama: "",
-            },
-          ],
-          kata_asing: [
-            {
-              bahasa: "en",
-              nama: "name",
-            },
-            {
-              bahasa: "en",
-              nama: "new",
-            },
-          ],
-        },
-      ],
-    },
-  ];
+    // const res = await fetch(`http:/localhost:8000/lemma/?limit=10`)
+    // const data: Array<LemmaData> = await res.json()
 
   return {
     props: {
-      data: mockData,
+      data: SenaraiLemma
     },
   };
 };
