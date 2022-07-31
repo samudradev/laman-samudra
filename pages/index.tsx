@@ -49,6 +49,7 @@ const Halaman: NextPage<HalamanProps> = ({ data }) => {
               </p>
             </div>
             <div className="mt-8">
+              <p>Sampel Data</p>
               {data.map((lemma) => (
                 <Lemma lemma={lemma} key={`lemma-${lemma.id}`} />
               ))}
