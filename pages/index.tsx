@@ -69,6 +69,10 @@ const Halaman: NextPage<HalamanProps> = ({ data }) => {
 export const getServerSideProps: GetServerSideProps<
   HalamanProps
 > = async () => {
+  //   const res = await fetch(`http:/localhost:8000/lemma/?limit=10`)
+  //   const data: Array<LemmaProp> = await res.json()
+
+  // Data palsu sementara
   const mockData: LemmaData[] = [
     {
       id: 1,
@@ -105,36 +109,5 @@ export const getServerSideProps: GetServerSideProps<
     },
   };
 };
-
-// export async function getServerSideProps() {
-//   // Load initial data
-//   const res = await fetch(`http:/localhost:8000/lemma/?limit=10`)
-//   const data: Array<LemmaProp> = await res.json()
-
-//   // Mock data temporarily
-// const mockData = {
-//   "lemma": "nama",
-//   "konsep": {
-//     "keterangan": "keterangan konsep",
-//     "golongan": "NAMA",
-//     "cakupan": [
-//       "pasar",
-//       "percakapan"
-//     ],
-//     "kata_asing": [
-//       {
-//         "bahasa": "en",
-//         "nama": "name"
-//       },
-//       {
-//         "bahasa": "en",
-//         "nama": "new"
-//       }
-//     ]
-//   }
-// };
-
-//   return {props: {data: mockData}}
-// }
 
 export default Halaman;
