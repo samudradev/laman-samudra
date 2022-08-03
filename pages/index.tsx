@@ -5,6 +5,7 @@ import Input from "components/Borang/Input";
 import { useFormik } from "formik";
 
 import communityAnimation from "lottie/community.json";
+import Amaran from "components/Selingan/Amaran";
 
 const Halaman: NextPage = () => {
   const borangCarian = useFormik({
@@ -36,13 +37,11 @@ const Halaman: NextPage = () => {
               />
             </form>
 
-            <div className="bg-amaran text-amaran-tulisan px-4 py-2 rounded border border-amaran-tulisan">
-              <p>
+            <Amaran>
                 Halaman ini masih dalam pembangunan dan di peringkat alfa, maka
                 beberapa fungsi tidak dapat digunakan buat masa ini. Terima
                 kasih kerana memahami.
-              </p>
-            </div>
+            </Amaran>
           </div>
           <div>
             <Lottie
