@@ -16,7 +16,7 @@ export type KonsepData = {
   id: number;
   golongan: string;
   keterangan: string;
-  tertib: number;
+  tertib?: number;
   cakupan?: CakupanData[];
   kata_asing?: KataAsingData[];
 };
