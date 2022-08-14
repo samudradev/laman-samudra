@@ -8,6 +8,8 @@ import communityAnimation from "lottie/community.json";
 import { LemmaData } from "utils/lemma";
 import Lemma from "components/Data/Lemma";
 import SenaraiLemma from "data/mocks/lemma";
+import Amaran from "components/Selingan/Amaran";
+import Info from "components/Selingan/info";
 
 interface HalamanProps {
   data: LemmaData[];
@@ -55,6 +57,19 @@ const Halaman: NextPage<HalamanProps> = ({ data }) => {
                 <Lemma lemma={lemma} key={`lemma-${lemma.id}`} />
               ))}
             </div>
+            <Amaran>
+                Halaman ini masih dalam pembangunan dan di peringkat alfa, maka
+                beberapa fungsi tidak dapat digunakan buat masa ini. Terima
+                kasih kerana memahami.
+            </Amaran>
+
+            <Info tajuk="Ingin menyumbang?">
+              {/* ! Kalau aku pakai ol > li untuk buat list, dia bagi React Hydration Error. */}
+              {/* ! Aku tak tahu nak selesaikan macam mana so aku buat macam ni dulu */}
+              - Sekiranya ingin menyumbang bahagian hadapan (laman webnya), boleh ke repo <a className="text-amaran-tulisan" href="https:/github.com/alserembani94/laman-samudra">Laman Samudra</a>.<br/> 
+              - Sekiranya ingin menyumbang bahagian belakang (enjinnya), boleh ke repo <a className="text-amaran-tulisan" href="https:/github.com/Thaza-Kun/samudra">Samudra</a>. <br/>
+              - Sekiranya ingin menyumbang secara kewangan, boleh ke laman <a className="text-amaran-tulisan" href="https:/ko-fi.com/Thaza-Kun">Ko-fi</a>.
+            </Info>
           </div>
           <div>
             <Lottie

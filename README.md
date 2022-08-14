@@ -6,7 +6,7 @@ Samudra merupakan satu sistem pengistilahan dan pengongsian yang sedang dibangun
 
 ---
 
-## Maklumat berkairan Halaman Samudra
+## Maklumat berkairan Halaman Samudra 
 
 Projek ini dibangunkan menggunakan tetimbun berikut:
 
@@ -22,4 +22,5 @@ Untuk memulakan, anda boleh klonkan projek ini, dan membuat cabang baru. Kemudia
 
 Sekiranya terdapat masalah atau cadangan, anda boleh menggunakan tab `Discussion` untuk memulakan perbincangan berkaitan Laman Samudra.
 
-Terima kasih kepada yang sudi menyumbang! :thumbsup:
+
+Terima kasih kepada yang sudi menyumbang 👍🏽!
