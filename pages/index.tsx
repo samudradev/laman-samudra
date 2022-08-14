@@ -1,14 +1,21 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import AturanLalai from "layouts/AturanLalai";
 import Lottie from "lottie-react";
 import Input from "components/Borang/Input";
 import { useFormik } from "formik";
 
 import communityAnimation from "lottie/community.json";
+import { LemmaData } from "utils/lemma";
+import Lemma from "components/Data/Lemma";
+import SenaraiLemma from "data/mocks/lemma";
 import Amaran from "components/Selingan/Amaran";
 import Info from "components/Selingan/info";
 
-const Halaman: NextPage = () => {
+interface HalamanProps {
+  data: LemmaData[];
+}
+
+const Halaman: NextPage<HalamanProps> = ({ data }) => {
   const borangCarian = useFormik({
     initialValues: {
       carian: "",
@@ -37,7 +44,19 @@ const Halaman: NextPage = () => {
                 onChange={borangCarian.handleChange}
               />
             </form>
-
+            <div className="bg-amaran text-amaran-tulisan px-4 py-2 rounded border border-amaran-tulisan">
+              <p>
+                Halaman ini masih dalam pembangunan dan di peringkat alfa, maka
+                beberapa fungsi tidak dapat digunakan buat masa ini. Terima
+                kasih kerana memahami.
+              </p>
+            </div>
+            <div className="mt-8">
+              <p>Sampel Data</p>
+              {data.map((lemma) => (
+                <Lemma lemma={lemma} key={`lemma-${lemma.id}`} />
+              ))}
+            </div>
             <Amaran>
                 Halaman ini masih dalam pembangunan dan di peringkat alfa, maka
                 beberapa fungsi tidak dapat digunakan buat masa ini. Terima
@@ -62,6 +81,19 @@ const Halaman: NextPage = () => {
       </div>
     </AturanLalai>
   );
+};
+
+export const getServerSideProps: GetServerSideProps<
+  HalamanProps
+> = async () => {
+  // const res = await fetch(`http:/localhost:8000/lemma/?limit=10`)
+  // const data: Array<LemmaData> = await res.json()
+
+  return {
+    props: {
+      data: process.env.NODE_ENV === "production" ? [] : SenaraiLemma,
+    },
+  };
 };
 
 export default Halaman;
