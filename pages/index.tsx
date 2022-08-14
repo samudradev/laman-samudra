@@ -86,17 +86,23 @@ export const getServerSideProps: GetServerSideProps<
           tertib: 1,
           cakupan: [
             {
-              nama: "",
+              cakupan: {
+                nama: "",
+              },
             },
           ],
           kata_asing: [
             {
-              bahasa: "en",
-              nama: "name",
+              kata_asing: {
+                bahasa: "en",
+                nama: "name",
+              },
             },
             {
-              bahasa: "en",
-              nama: "new",
+              kata_asing: {
+                bahasa: "en",
+                nama: "name",
+              },
             },
           ],
         },
