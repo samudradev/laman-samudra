@@ -49,7 +49,7 @@ const Halaman: NextPage = () => {
               {/* ! Aku tak tahu nak selesaikan macam mana so aku buat macam ni dulu */}
               - Sekiranya ingin menyumbang bahagian hadapan (laman webnya), boleh ke repo <a className="text-amaran-tulisan" href="https://www.github.com/alserembani94/laman-samudra">Laman Samudra</a>.<br/> 
               - Sekiranya ingin menyumbang bahagian belakang (enjinnya), boleh ke repo <a className="text-amaran-tulisan" href="https://www.github.com/Thaza-Kun/samudra">Samudra</a>. <br/>
-              - Sekiranya ingin menyumbang secara kewangan, boleh ke laman <a className="text-amaran-tulisan" href="https://www.ko-fi.com/Thaza-Kun">Ko-fi</a>.
+              - Sekiranya ingin menyumbang secara kewangan, boleh ke laman <a className="text-amaran-tulisan" href="https://www.ko-fi.com/Thaza_Kun">Ko-fi</a>.
             </Info>
           </div>
           <div>
