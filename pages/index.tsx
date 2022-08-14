@@ -76,7 +76,7 @@ export const getServerSideProps: GetServerSideProps<
 
   return {
     props: {
-      data: SenaraiLemma,
+      data: process.env.NODE_ENV === "production" ? [] : SenaraiLemma,
     },
   };
 };
