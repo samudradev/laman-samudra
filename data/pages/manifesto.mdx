@@ -15,7 +15,7 @@ Oleh itu, kita tidak patut reka sistem kamus digital menggunakan kaedah yang sam
 Zaman Internet Segala Benda menjemput pelbagai cara mencapai data yang sama.
 Oleh itu, kami bertekad agar data yang tersimpan dalam pangkalan data Samudra boleh:
 
-1. dicapai melalui **pengantara beraturcara** sesama aplikasi (API) bagi capaian beraturcara.
+1. dicapai melalui **pengantara beraturcara sesama aplikasi** (API) bagi capaian beraturcara.
 2. dicapai melalui **laman web** bagi capaian pengguna biasa.
 3. dieksport menjadi **format fail berbeza** bagi mendukung capaian selain yang disebutkan di atas seperti:
     - gambar (`.png` atau `.jpg`),
@@ -27,10 +27,44 @@ Pengeksportan dan perkongsian data menjadi renyah dan terbatas.
 Mana-mana kaedah penyimpanan yang meniru sistem fizikal (seperti menyimpan data induk dalam `.pdf`/`.docx` yang panjang) akan meniru keterbatasannya juga.
 Maka, data induk harus disimpan dalam format yang lebih anjal seperti pangkalan data.
 
-## 2. Data Tercerakin Menatijahkan Keanjalan
+## 2. Pencerakinan Data Menatijahkan Keanjalan
 
-Perkataan yang dipaparkan dalam kamus fizikal dicemari pelbagai metadata yang menerangkan lanjut maklumat yang dipegang oleh satu-satu perkataan.
+Perkataan yang dipaparkan dalam kamus fizikal dicemari pelbagai metadata yang menerangkan lanjut maklumat yang terkandung dalam setiap perkataan.
 Metadata ini harus dicerakinkan mengikut fungsi masing-masing lalu dipasangkan pada data takrifan melalui perhubungan yang tertakrif.
-...
+Pencerakinan data ini membolehkan capaian dan persembahan data yang lebih anjal yang tidak dapat ditiru aksara-aksara cetak.
+
+Misalnya, ambil lema (masukan kata) "tuna" dalam Kamus Dewan Edisi Keempat yang disalin tampal dari [PRPM](https://prpm.dbp.gov.my/Cari1?keyword=tuna) bulat-bulat:
+> [tu.na] | تونا
+> 
+> Definisi : sl luka, cacat, rosak; tertuna 1. kena luka, mendapat luka: ia berasa tertikam dan ~; 2. ki mendapat sesuatu kecelaan (kecacatan dll), menderita (kerana sesuatu yg tidak menyenangkan): banyak antara mereka yg ~ rindu dan renjana, kerana perwira yg muda belia ini. 
+
+Di sini kita dapati ada beberapa jenis data seperti senarai konsep, kata sama maksud, konteks penggunaannya, dan petikan ayat.
+Setiap satu ini boleh dicerakinkan menjadi data tersendiri lalu boleh dipadankan dengan data berkaitan yang lain.
+Kelebihannya, kita bukan sahaja dapat maklumat kata "tuna" tetapi maklumat kata lain dan maklumat konteks berkait juga dapat dihubungkan.
+
+<figure>
+![](./images/manifesto-2a.png)
+<caption>Kelebihan 1: Data-data berkait boleh dihubungkan melalui pautan. Dalam kamus cetak, pengguna perlu belek sendiri setiap helai mencari perkataan berkait.</caption>
+</figure>
+
+<figure>
+![](./images/manifesto-2b.png)
+<caption>Kelebihan 2: Senarai perkataan dalam konteks tertentu akan terbina dengan sendirinya (seperti senarai kata pinjaman Bahasa Inggeris dan senarai kata bidang Fizik).</caption>
+</figure>
+
+
 
 ## 3. Data Hidup Bersama Penggunaannya
+
+Kos menambah atau mengubah lema dalam dunia digital jauh lebih murah berbanding menambah atau mengubah lema dalam kamus fizikal.
+Setiap makna baharu yang muncul harus menunggu pencetakan kamus baharu yang memakan kos yang banyak sedangkan dalam dunia digital, setiap perubahan hanya bergantung kepada lema-lema terpilih sahaja.
+Maksudnya, kitaran pemutakhiran kata boleh dipendekkan berbanding 12± tahun setiap pengemaskinian kamus!
+
+<figure>
+![](./images/manifesto-3a.png)
+<caption>
+Menurut sejarah percetakan Kamus Dewan (rujukan utama bahasa Melayu), sela masa pengemaskinian kamus mengambil masa dari 10 sehingga 15 tahun!
+Sebagai perbandingan, Kamus Besar Bahasa Indonesia dalam jaringan (KBBI daring) memutakhirkan kamus dalam taliannya setiap 6 bulan (April dan Oktober setiap tahun).
+KBBI daring dijadikan contoh perbandingan kerana DBP tidak mendedahkan kitaran pemutakhiran mereka.
+</caption>
+</figure>
